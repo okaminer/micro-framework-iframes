@@ -1,8 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<button (click)="onClick()" class="banner">click me!!!!</button>
-<iframe class="iframe-placeholder" id="myframe" src="http://localhost:4202" width="300" height="300"></iframe>
-<button (click)="addLog()" class="banner">add log!!!!</button>
-<app-log></app-log>
+
+<div  class="box">
+  <div class="row header">
+    <div class="topnav">
+      <a href="#" (click)="soStuff('exampleFrame')">example</a>
+      <a href="#" (click)="soStuff('webuiFrame')">webui</a>
+      <a href="#" (click)="soStuff('vxFlexFrame')">vxflex</a>
+    </div>
+  </div>
+  <div class="row content">
+    <button (click)="onClick()" class="banner">click me!!!!</button>
+    <iframe class="iframe-placeholder" id="exampleFrame" src="http://localhost:4202" ></iframe>
+    <iframe class="iframe-placeholder" id="webuiFrame" src="https://localhost:4200" style="display: none"></iframe>
+    <iframe class="iframe-placeholder" id="vxFlexFrame" src="https://10.234.221.104" style="display: none"></iframe>
+  </div>
+  <div class="row footer">
+    <button (click)="addLog()" class="banner">add log!!!!</button>
+    <app-log></app-log>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
