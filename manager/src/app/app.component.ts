@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LogsrvService} from './logsrv.service';
-import {send} from 'q';
+import {InternalServerBusService} from './MessageBus/internal-server-bus.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   title = 'manager';
 
-  constructor(private logService: LogsrvService) {
+  constructor(private serviceBus: InternalServerBusService, private logService: LogsrvService) {
   }
   currentIframe: HTMLIFrameElement;
   ngOnInit() {
@@ -21,6 +21,9 @@ export class AppComponent implements OnInit {
     this.hideBackgroundOnLoad('webuiFrame');
     this.hideBackgroundOnLoad('vxFlexFrame');
     this.currentIframe = (<HTMLIFrameElement>document.getElementById('exampleFrame'));
+
+    // this.serviceBus.start();
+
   }
 
   hideBackgroundOnLoad(frameId: string) {
