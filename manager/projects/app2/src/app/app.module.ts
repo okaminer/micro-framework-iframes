@@ -2,23 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { MasterAppComponent } from './master-app.component';
-import { LogComponent } from './log/log.component';
-import { LogsrvService } from './logsrv.service';
+import { App2AppComponent } from './app2-app.component';
 import { FormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
-    MasterAppComponent,
-    LogComponent,
+    App2AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule
   ],
-  providers: [LogsrvService],
-  bootstrap: [MasterAppComponent]
+  providers: [],
+  bootstrap: [App2AppComponent]
 })
 export class AppModule { }

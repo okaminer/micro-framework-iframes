@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<span>{{message}}</span>
+
+<div>
+<input  type="text"  [(ngModel)]="dataToSend" placeholder="message">
+<input type="text" [(ngModel)]="destApp" placeholder="dest app">
+
+<button (click)="sendMessage()">send message</button>
+</div>
+
+<div>
+  <button (click)="moveToWebUI()">Move to web ui</button>
+  <input type="text" [(ngModel)]="webuiPage" placeholder="sdc">
+</div>
+
+
+<p>Messages received:</p>
+<div *ngFor = "let log of listLog;">
+  <span class="d-block p-2 bg-dark text-white margin10px comment">{{log}}</span>
+</div>
+
+<router-outlet></router-outlet>
