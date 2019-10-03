@@ -3,9 +3,10 @@
   background: url('~src/assets/icons/load.gif');
   background-repeat: no-repeat;
   background-position: center;
+  display: block;
   border: 0;
   width: 100%;
-  height: 800px;
+  height: 100%;
 }
 
 
@@ -64,7 +65,11 @@
 }
 
 .box .row.content {
-  flex: 1 1 auto;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  //flex: 1 1 auto;
+
 }
 
 .box .row.footer {

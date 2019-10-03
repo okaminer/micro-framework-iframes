@@ -3,31 +3,31 @@
 
 
 <div  class="box">
-  <div class="row header">
-    <div class="topnav">
-      <a href="#" (click)="switchApp('app1')">app1</a>
-      <a href="#" (click)="switchApp('app2')">app2</a>
-      <a href="#" (click)="switchApp('webuiApp')">webui</a>
-      <a href="#" (click)="switchApp('vxFlexFrame')">vxflex</a>
-    </div>
-    <div>
-      <button (click)="sendMessage()">Send message to app1</button>
-      <input [(ngModel)]="messageToSend" placeholder="message">
-      <input [(ngModel)]="destApp" placeholder="dest app">
-    </div>
-  </div>
+  <!--<div class="row header">-->
+    <!--<div class="topnav">-->
+      <!--<a href="#" (click)="switchApp('app1')">app1</a>-->
+      <!--<a href="#" (click)="switchApp('app2')">app2</a>-->
+      <!--<a href="#" (click)="switchApp('webuiApp')">webui</a>-->
+      <!--<a href="#" (click)="switchApp('vxFlexFrame')">vxflex</a>-->
+    <!--</div>-->
+    <!--<div>-->
+      <!--<button (click)="sendMessage()">Send message to app1</button>-->
+      <!--<input [(ngModel)]="messageToSend" placeholder="message">-->
+      <!--<input [(ngModel)]="destApp" placeholder="dest app">-->
+    <!--</div>-->
+  <!--</div>-->
   <div class="row content">
-    <button (click)="onClick()" class="banner">click me!!!!</button>
-    <iframe class="iframe-placeholder" id="app1" src="http://localhost:4202" ></iframe>
+    <!--<button (click)="onClick()" class="banner">click me!!!!</button>-->
+    <iframe class="iframe-placeholder" id="app1" src="http://localhost:4202" style="display: none"></iframe>
     <iframe class="iframe-placeholder" id="app2" src="http://localhost:4203" style="display: none"></iframe>
     <iframe class="iframe-placeholder" id="webuiApp" src="https://localhost:8443" style="display: none"></iframe>
     <!--<iframe class="iframe-placeholder" id="vxFlexFrame" src="http://localhost/flex1" style="display: none"></iframe>-->
-    <iframe class="iframe-placeholder" id="vxFlexFrame" src="https://10.234.221.104" style="display: none"></iframe>
+    <iframe class="iframe-placeholder" id="vxFlexFrame" src="https://10.234.221.104" ></iframe>
   </div>
-  <div class="row footer">
-    <button (click)="addLog()" class="banner">add log!!!!</button>
-    <app-log></app-log>
-  </div>
+  <!--<div class="row footer">-->
+    <!--<button (click)="addLog()" class="banner">add log!!!!</button>-->
+    <!--<app-log></app-log>-->
+  <!--</div>-->
 </div>
 
 <router-outlet></router-outlet>
